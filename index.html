@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leyy Portfolio - Neocron Evolution</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div id="loading-screen">
+        <div class="loading-container">
+            <div class="neocron-logo">
+                <div class="circuit-pattern"></div>
+                <h1>NEOCRON EVOLUTION</h1>
+                <div class="loading-bar">
+                    <div class="loading-progress"></div>
+                </div>
+                <p>Initializing Neural Interface...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="glitch" data-text="LEYY_PORTFOLIO">LEYY_PORTFOLIO</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">HOME</a></li>
+                <li><a href="#about" class="nav-link">ABOUT</a></li>
+                <li><a href="#projects" class="nav-link">PROJECTS</a></li>
+                <li><a href="#contact" class="nav-link">CONTACT</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="circuit-overlay"></div>
+            <div class="particles-container"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="glitch" data-text="LEYY">LEYY</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    <span class="typewriter">Étudiant Epitech PGE • Dev C Systems</span>
+                </h2>
+                <p class="hero-description">
+                    Passionné d'aviation et de jeux rétro, je développe des solutions système en C et explore les technologies du futur à Epitech Marseille
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">VOIR PROJETS</a>
+                    <a href="#contact" class="btn btn-secondary">CONNEXION</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hologram-frame">
+                    <div class="hologram-content">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-arrow"></div>
+            <span>SCROLL</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="glitch" data-text="NEURAL_PROFILE">NEURAL_PROFILE</span>
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="terminal-window">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-minimize"></span>
+                                <span class="btn-maximize"></span>
+                            </div>
+                            <span class="terminal-title">profile.exe</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="terminal-line">
+                                <span class="prompt">leyy@Blackwall:~$</span> 
+                                <span class="command">cat about.txt</span>
+                            </p>
+                            <p class="output">
+                                Étudiant en 2ème année PGE à Epitech Marseille, passionné par la programmation système 
+                                et les technologies bas niveau. Amateur d'aviation et de gaming rétro, 
+                                je développe principalement en C et explore l'univers cyberpunk à travers mes projets.
+                            </p>
+                            <p class="terminal-line">
+                                <span class="prompt">leyy@Blackwall:~$</span> 
+                                <span class="command">ls skills/</span>
+                            </p>
+                            <div class="skills-grid">
+                                <div class="skill-item">
+                                    <i class="fab fa-c"></i>
+                                    <span>C Programming</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-terminal"></i>
+                                    <span>System Programming</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-js"></i>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-html5"></i>
+                                    <span>HTML5</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-css3-alt"></i>
+                                    <span>CSS3</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fab fa-linux"></i>
+                                    <span>Linux/Unix</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-plane"></i>
+                                    <span>Aviation</span>
+                                </div>
+                                <div class="skill-item">
+                                    <i class="fas fa-gamepad"></i>
+                                    <span>Retro Gaming</span>
+                                </div>
+                            </div>
+                            <p class="terminal-line">
+                                <span class="prompt">leyy@Blackwall:~$</span> 
+                                <span class="command">whoami</span>
+                            </p>
+                            <p class="output">
+                                "Juste un étudiant qui aime l'aviation et les jeux rétro" 🛩️🎮
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="6">0</div>
+                        <div class="stat-label">Projets Epitech</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="2">0</div>
+                        <div class="stat-label">Années d'Études</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number" data-target="95">0</div>
+                        <div class="stat-label">% Code en C</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="glitch" data-text="DIGITAL_ARCHIVES">DIGITAL_ARCHIVES</span>
+            </h2>
+            <div class="projects-grid">
+                <!-- Project 1 - Pipeline -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://github.com/EpitechPGEPromo2029/G-SEC-210-MAR-2-1-pipeto-ryad.younes" class="btn btn-primary" target="_blank">VOIR</a>
+                                <a href="https://github.com/EpitechPGEPromo2029/G-SEC-210-MAR-2-1-pipeto-ryad.younes" class="btn btn-secondary" target="_blank">CODE</a>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/400x250/1a1a2e/ff6600?text=PIPETO" alt="Pipeline Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Pipeto - Pipeline System</h3>
+                        <p>Implémentation d'un système de pipeline avancé en C, gestion des processus et communication inter-processus</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">System Programming</span>
+                            <span class="tech-tag">Makefile</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 - Minishell -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://github.com/EpitechPGEPromo2029/B-PSU-200-MAR-2-1-minishell2-ryad.younes" class="btn btn-primary" target="_blank">VOIR</a>
+                                <a href="https://github.com/EpitechPGEPromo2029/B-PSU-200-MAR-2-1-minishell2-ryad.younes" class="btn btn-secondary" target="_blank">CODE</a>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/400x250/1a1a2e/ff6600?text=MINISHELL" alt="Minishell Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>Minishell - Terminal Interface</h3>
+                        <p>Création d'un shell personnalisé avec gestion des commandes, pipes et redirections</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">Unix System</span>
+                            <span class="tech-tag">Shell Programming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 - MyRadar -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://github.com/EpitechPGEPromo2029/B-MUL-100-MAR-1-1-myradar-ryad.younes" class="btn btn-primary" target="_blank">VOIR</a>
+                                <a href="https://github.com/EpitechPGEPromo2029/B-MUL-100-MAR-1-1-myradar-ryad.younes" class="btn btn-secondary" target="_blank">CODE</a>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/400x250/1a1a2e/ff6600?text=RADAR+✈️" alt="MyRadar Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>MyRadar - Air Traffic Control</h3>
+                        <p>Simulateur de contrôle aérien avec interface graphique, parfait pour un passionné d'aviation !</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">CSFML</span>
+                            <span class="tech-tag">Graphics Programming</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 - MyHunter -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://github.com/EpitechPGEPromo2029/B-MUL-100-MAR-1-1-myhunter-ryad.younes" class="btn btn-primary" target="_blank">VOIR</a>
+                                <a href="https://github.com/EpitechPGEPromo2029/B-MUL-100-MAR-1-1-myhunter-ryad.younes" class="btn btn-secondary" target="_blank">CODE</a>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/400x250/1a1a2e/ff6600?text=HUNTER+🎮" alt="MyHunter Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>MyHunter - Retro Game</h3>
+                        <p>Jeu de type "Duck Hunt" développé en C avec CSFML, un hommage aux jeux rétro</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">CSFML</span>
+                            <span class="tech-tag">Game Development</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 - MyPrintf -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://github.com/EpitechPGEPromo2029/B-CPE-101-MAR-1-1-myprintf-nael.gamba" class="btn btn-primary" target="_blank">VOIR</a>
+                                <a href="https://github.com/EpitechPGEPromo2029/B-CPE-101-MAR-1-1-myprintf-nael.gamba" class="btn btn-secondary" target="_blank">CODE</a>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/400x250/1a1a2e/ff6600?text=PRINTF" alt="MyPrintf Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>MyPrintf - Custom Library</h3>
+                        <p>Réimplémentation de la fonction printf en C, gestion des formats et optimisation</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">C</span>
+                            <span class="tech-tag">Library Development</span>
+                            <span class="tech-tag">String Processing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 - EpyTodo -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-overlay">
+                            <div class="project-buttons">
+                                <a href="https://github.com/EpitechPGEPromo2029/B-WEB-200-MAR-2-1-epytodo-theo.vitte" class="btn btn-primary" target="_blank">VOIR</a>
+                                <a href="https://github.com/EpitechPGEPromo2029/B-WEB-200-MAR-2-1-epytodo-theo.vitte" class="btn btn-secondary" target="_blank">CODE</a>
+                            </div>
+                        </div>
+                        <img src="https://via.placeholder.com/400x250/1a1a2e/ff6600?text=EPYTODO" alt="EpyTodo Project">
+                    </div>
+                    <div class="project-content">
+                        <h3>EpyTodo - Web Application</h3>
+                        <p>Application web de gestion de tâches avec interface moderne et backend JavaScript</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">Web Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="glitch" data-text="NEURAL_LINK">NEURAL_LINK</span>
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-terminal">
+                        <div class="terminal-header">
+                            <div class="terminal-buttons">
+                                <span class="btn-close"></span>
+                                <span class="btn-minimize"></span>
+                                <span class="btn-maximize"></span>
+                            </div>
+                            <span class="terminal-title">contact.exe</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="terminal-line">
+                                <span class="prompt">leyy@Blackwall:~$</span> 
+                                <span class="command">establish_connection</span>
+                            </p>
+                            <div class="contact-links">
+                                <a href="mailto:ryad.younes@epitech.eu" class="contact-link">
+                                    <i class="fas fa-envelope"></i>
+                                    <span>EMAIL_PROTOCOL</span>
+                                </a>
+                                <a href="https://github.com/CrOwOleyy" class="contact-link" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    <span>GITHUB_REPO</span>
+                                </a>
+                                <a href="https://open.spotify.com/intl-fr/artist/317EqPWzKg2xyljrtBu8RY?si=lSqb2OSxSj-eVpZOb-PdrQ" class="contact-link">
+                                    <i class="fab fa-spotify"></i>
+                                    <span>SPOTIFY_ARTIST</span>
+                                </a>
+                            </div>
+                            <p class="terminal-line">
+                                <span class="prompt">leyy@Blackwall:~$</span>
+                                <span class="command">echo "Ready for new adventures"</span>
+                            </p>
+                            <p class="output">🛩️ Ready for new adventures ?🎮</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form class="neural-form">
+                        <div class="form-group">
+                            <label for="name">IDENTIFICATION</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">EMAIL_ADDRESS</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">MESSAGE_DATA</label>
+                            <textarea id="message" name="message" rows="5" required placeholder="Inscrivez votre message ici."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">TRANSMETTRE</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Leyy Portfolio - Epitech Marseille PGE. Cyberpunk vibes ✨</p>
+                <div class="footer-links">
+                    <a href="#home">Accueil</a>
+                    <a href="#about">À propos</a>
+                    <a href="#projects">Projets</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
