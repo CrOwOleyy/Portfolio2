@@ -81,7 +81,13 @@ body {
     height: 100%;
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     width: 0%;
-    animation: loading 3s ease-in-out infinite;
+    animation: loading 3s ease-in-out forwards; /* Ajout de 'forwards' */
+}
+
+@keyframes loading {
+    0% { width: 0%; }
+    70% { width: 70%; }
+    100% { width: 100%; }
 }
 
 .loading-container p {
@@ -822,4 +828,99 @@ section {
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     }
+}
+
+/* Ajoutez à la fin du fichier styles.css */
+
+/* Project image backgrounds */
+.project-image-bg {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-darker) 100%);
+    border: 2px solid var(--primary-color);
+}
+
+.project-icon {
+    font-size: 4rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    text-shadow: 0 0 20px var(--primary-color);
+}
+
+.project-label {
+    font-family: var(--font-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    text-align: center;
+    text-shadow: 0 0 10px var(--primary-color);
+}
+
+/* Specific project backgrounds */
+.pipeto-bg {
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+}
+
+.minishell-bg {
+    background: linear-gradient(135deg, #1a1a2e 0%, #2d1b2e 50%, #3e1065 100%);
+}
+
+.myradar-bg {
+    background: linear-gradient(135deg, #1a1a2e 0%, #2e2416 50%, #603810 100%);
+}
+
+.myhunter-bg {
+    background: linear-gradient(135deg, #1a1a2e 0%, #2e1616 50%, #601010 100%);
+}
+
+.myprintf-bg {
+    background: linear-gradient(135deg, #1a1a2e 0%, #162e16 50%, #106010 100%);
+}
+
+.epytodo-bg {
+    background: linear-gradient(135deg, #1a1a2e 0%, #2e1a16 50%, #601a10 100%);
+}
+
+/* Animation pour les icônes de projet */
+.project-card:hover .project-icon {
+    animation: pulse-icon 1s infinite;
+    transform: scale(1.1);
+}
+
+@keyframes pulse-icon {
+    0%, 100% { 
+        text-shadow: 0 0 20px var(--primary-color);
+        transform: scale(1.1);
+    }
+    50% { 
+        text-shadow: 0 0 40px var(--primary-color), 0 0 60px var(--primary-color);
+        transform: scale(1.15);
+    }
+}
+
+/* Effet de scan sur les images de projet */
+.project-image-bg::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(255, 102, 0, 0.1) 50%,
+        transparent 100%
+    );
+    animation: project-scan 3s linear infinite;
+}
+
+@keyframes project-scan {
+    0% { top: -100%; }
+    100% { top: 100%; }
 }
