@@ -1,4 +1,4 @@
-/* Reset et variables */
+
 :root {
     --primary-color: #ff6600;
     --secondary-color: #ff4444;
@@ -32,7 +32,7 @@ body {
     line-height: 1.6;
 }
 
-/* Loading Screen */
+
 #loading-screen {
     position: fixed;
     top: 0;
@@ -81,7 +81,7 @@ body {
     height: 100%;
     background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
     width: 0%;
-    animation: loading 3s ease-in-out forwards; /* Ajout de 'forwards' */
+    animation: loading 3s ease-in-out forwards;
 }
 
 @keyframes loading {
@@ -96,7 +96,7 @@ body {
     animation: blink 1s infinite;
 }
 
-/* Navigation */
+
 .navbar {
     position: fixed;
     top: 0;
@@ -171,7 +171,7 @@ body {
     transition: var(--transition);
 }
 
-/* Hero Section */
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -333,7 +333,7 @@ body {
     margin: 0 auto 0.5rem;
 }
 
-/* Sections communes */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -352,7 +352,7 @@ section {
     color: var(--primary-color);
 }
 
-/* About Section */
+
 .about {
     background: var(--bg-card);
 }
@@ -490,7 +490,7 @@ section {
     font-weight: 600;
 }
 
-/* Projects Section */
+
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -579,7 +579,7 @@ section {
     border: 1px solid var(--primary-color);
 }
 
-/* Contact Section */
+
 .contact {
     background: var(--bg-card);
 }
@@ -661,7 +661,7 @@ section {
     box-shadow: 0 0 10px rgba(255, 102, 0, 0.3);
 }
 
-/* Footer */
+
 .footer {
     background: var(--bg-darker);
     padding: 2rem 0;
@@ -690,7 +690,7 @@ section {
     color: var(--primary-color);
 }
 
-/* Effets et animations */
+
 .glitch {
     position: relative;
     display: inline-block;
@@ -768,7 +768,7 @@ section {
     60% { transform: translateY(-5px); }
 }
 
-/* Responsive Design */
+
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
@@ -830,9 +830,9 @@ section {
     }
 }
 
-/* Ajoutez à la fin du fichier styles.css */
 
-/* Project image backgrounds */
+
+
 .project-image-bg {
     width: 100%;
     height: 100%;
@@ -861,7 +861,7 @@ section {
     text-shadow: 0 0 10px var(--primary-color);
 }
 
-/* Specific project backgrounds */
+
 .pipeto-bg {
     background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
 }
@@ -886,7 +886,7 @@ section {
     background: linear-gradient(135deg, #1a1a2e 0%, #2e1a16 50%, #601a10 100%);
 }
 
-/* Animation pour les icônes de projet */
+
 .project-card:hover .project-icon {
     animation: pulse-icon 1s infinite;
     transform: scale(1.1);
@@ -903,7 +903,7 @@ section {
     }
 }
 
-/* Effet de scan sur les images de projet */
+
 .project-image-bg::before {
     content: '';
     position: absolute;

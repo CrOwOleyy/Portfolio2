@@ -1,25 +1,25 @@
-// Loading Screen - CORRECTION
+
 window.addEventListener('load', () => {
     const loadingScreen = document.getElementById('loading-screen');
-    // Attendre que tous les éléments soient chargés
+    
     setTimeout(() => {
         loadingScreen.style.opacity = '0';
         setTimeout(() => {
             loadingScreen.style.display = 'none';
-            loadingScreen.remove(); // Supprimer complètement l'élément
+            loadingScreen.remove(); 
         }, 500);
     }, 2000);
 });
 
-// Initialize EmailJS
+
 (function() {
-    // Vérifier si EmailJS est disponible avant de l'initialiser
+    
     if (typeof emailjs !== 'undefined') {
-        emailjs.init("YOUR_PUBLIC_KEY"); // Remplacez par votre clé publique EmailJS
+        emailjs.init("YOUR_PUBLIC_KEY"); 
     }
 })();
 
-// Navigation
+
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
 const navLinks = document.querySelectorAll('.nav-link');
@@ -40,7 +40,7 @@ navLinks.forEach(link => {
     });
 });
 
-// Smooth scrolling
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -54,7 +54,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Typewriter effect
+
 function typeWriter(element, text, speed = 100) {
     if (!element) return;
     let i = 0;
@@ -70,26 +70,26 @@ function typeWriter(element, text, speed = 100) {
     type();
 }
 
-// Initialize typewriter when page loads
+
 document.addEventListener('DOMContentLoaded', () => {
     const typewriterElement = document.querySelector('.typewriter');
     if (typewriterElement) {
-        // Attendre un peu avant de démarrer l'effet
+        
         setTimeout(() => {
             typeWriter(typewriterElement, 'Étudiant Epitech PGE • Dev C Systems');
-        }, 3000); // Démarrer après le chargement
+        }, 3000); 
     }
 });
 
-// Particles animation (orange theme)
+
 function createParticles() {
     const particlesContainer = document.querySelector('.particles-container');
     if (!particlesContainer) return;
     
-    // Vider le conteneur d'abord
+    
     particlesContainer.innerHTML = '';
     
-    for (let i = 0; i < 30; i++) { // Réduire le nombre pour les performances
+    for (let i = 0; i < 30; i++) { 
         const particle = document.createElement('div');
         particle.style.cssText = `
             position: absolute;
@@ -107,9 +107,9 @@ function createParticles() {
     }
 }
 
-// CSS for particle animation - CORRECTION
+
 const style = document.createElement('style');
-style.id = 'particle-style'; // Ajouter un ID pour éviter les doublons
+style.id = 'particle-style'; 
 if (!document.getElementById('particle-style')) {
     style.textContent = `
         @keyframes float-particle {
@@ -126,12 +126,12 @@ if (!document.getElementById('particle-style')) {
     document.head.appendChild(style);
 }
 
-// Counter animation
+
 function animateCounters() {
     const counters = document.querySelectorAll('.stat-number');
     
     counters.forEach(counter => {
-        if (counter.dataset.animated) return; // Éviter la double animation
+        if (counter.dataset.animated) return; 
         counter.dataset.animated = 'true';
         
         const target = parseInt(counter.getAttribute('data-target'));
@@ -150,7 +150,7 @@ function animateCounters() {
     });
 }
 
-// Intersection Observer for animations
+
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -161,7 +161,7 @@ const observer = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             entry.target.classList.add('animate');
             
-            // Trigger counter animation for stats section
+            
             if (entry.target.classList.contains('about-stats') || entry.target.querySelector('.stat-number')) {
                 animateCounters();
             }
@@ -169,21 +169,21 @@ const observer = new IntersectionObserver((entries) => {
     });
 }, observerOptions);
 
-// Observe elements for animation - CORRECTION
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Attendre que le chargement soit terminé
+    
     setTimeout(() => {
         const animatedElements = document.querySelectorAll('.project-card, .stat-card, .skill-item, .terminal-window');
         animatedElements.forEach(el => {
             if (el) observer.observe(el);
         });
         
-        // Create particles seulement une fois
+        
         createParticles();
     }, 3000);
 });
 
-// Navbar scroll effect
+
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
@@ -197,7 +197,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Form handling with EmailJS - CORRECTION
+
 document.addEventListener('DOMContentLoaded', () => {
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
@@ -209,12 +209,12 @@ document.addEventListener('DOMContentLoaded', () => {
             
             const originalText = submitBtn.textContent;
             
-            // Animation de chargement
+            
             submitBtn.textContent = 'COMPILATION...';
             submitBtn.disabled = true;
             submitBtn.style.background = 'linear-gradient(45deg, #ff6600, #ffaa00)';
             
-            // Simuler l'envoi si EmailJS n'est pas configuré
+            
             if (typeof emailjs === 'undefined') {
                 setTimeout(() => {
                     submitBtn.textContent = 'MESSAGE TRANSMIS ✓';
@@ -231,7 +231,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             
-            // Envoi via EmailJS si configuré
+            
             emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
                 .then(function(response) {
                     console.log('SUCCESS!', response.status, response.text);
@@ -264,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// Fonction pour afficher des messages dans le terminal
+
 function showTerminalMessage(message, type = 'info') {
     const terminal = document.querySelector('.contact-terminal .terminal-body');
     if (!terminal) return;
@@ -280,10 +280,10 @@ function showTerminalMessage(message, type = 'info') {
     `;
     terminal.appendChild(newLine);
     
-    // Auto-scroll
+    
     terminal.scrollTop = terminal.scrollHeight;
     
-    // Supprimer après 10 secondes
+    
     setTimeout(() => {
         if (newLine && newLine.parentNode) {
             newLine.remove();
@@ -291,11 +291,11 @@ function showTerminalMessage(message, type = 'info') {
     }, 10000);
 }
 
-// Terminal cursor effect - CORRECTION
+
 function addCursorEffect() {
     const terminalLines = document.querySelectorAll('.terminal-line');
     terminalLines.forEach(line => {
-        // Vérifier si le curseur n'existe pas déjà
+        
         if (!line.querySelector('.terminal-cursor')) {
             const cursor = document.createElement('span');
             cursor.className = 'terminal-cursor';
@@ -310,20 +310,20 @@ function addCursorEffect() {
     });
 }
 
-// Initialize cursor effect - CORRECTION
+
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         addCursorEffect();
-    }, 3500); // Après le chargement
+    }, 3500); 
 });
 
-// Hologram scan effect (orange theme) - CORRECTION
+
 function createHologramScan() {
     const hologram = document.querySelector('.hologram-content');
     if (!hologram) return;
     
     const scanInterval = setInterval(() => {
-        // Vérifier si l'élément existe encore
+        
         if (!document.body.contains(hologram)) {
             clearInterval(scanInterval);
             return;
@@ -349,10 +349,10 @@ function createHologramScan() {
                 scanLine.remove();
             }
         }, 2000);
-    }, 4000); // Augmenter l'intervalle
+    }, 4000); 
 }
 
-// Add scan animation - CORRECTION
+
 const scanStyle = document.createElement('style');
 scanStyle.id = 'scan-style';
 if (!document.getElementById('scan-style')) {
@@ -367,16 +367,16 @@ if (!document.getElementById('scan-style')) {
     document.head.appendChild(scanStyle);
 }
 
-// Initialize hologram scan - CORRECTION
+
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         createHologramScan();
     }, 4000);
 });
 
-// Matrix rain effect (orange theme) - CORRECTION
+
 function createMatrixRain() {
-    // Vérifier si la matrice existe déjà
+    
     if (document.getElementById('matrix-container')) return;
     
     const matrixContainer = document.createElement('div');
@@ -394,7 +394,7 @@ function createMatrixRain() {
     
     const characters = '01EPITECH';
     
-    for (let i = 0; i < 10; i++) { // Réduire le nombre
+    for (let i = 0; i < 10; i++) { 
         const column = document.createElement('div');
         column.style.cssText = `
             position: absolute;
@@ -407,7 +407,7 @@ function createMatrixRain() {
             animation-delay: ${Math.random() * 5}s;
         `;
         
-        for (let j = 0; j < 10; j++) { // Réduire le nombre
+        for (let j = 0; j < 10; j++) { 
             const char = document.createElement('div');
             char.textContent = characters[Math.floor(Math.random() * characters.length)];
             char.style.marginBottom = '15px';
@@ -420,7 +420,7 @@ function createMatrixRain() {
     document.body.appendChild(matrixContainer);
 }
 
-// Matrix animation CSS - CORRECTION
+
 const matrixStyle = document.createElement('style');
 matrixStyle.id = 'matrix-style';
 if (!document.getElementById('matrix-style')) {
@@ -433,14 +433,14 @@ if (!document.getElementById('matrix-style')) {
     document.head.appendChild(matrixStyle);
 }
 
-// Initialize matrix rain - CORRECTION
+
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         createMatrixRain();
-    }, 5000); // Attendre plus longtemps
+    }, 5000); 
 });
 
-// Glitch effect on hover for project cards
+
 document.addEventListener('DOMContentLoaded', () => {
     setTimeout(() => {
         const projectCards = document.querySelectorAll('.project-card');
@@ -464,7 +464,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 3000);
 });
 
-// Aviation easter egg
+
 document.addEventListener('keydown', (e) => {
     if (e.ctrlKey && e.key === 'p') {
         e.preventDefault();
@@ -489,7 +489,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Add fly animation - CORRECTION
+
 const flyStyle = document.createElement('style');
 flyStyle.id = 'fly-style';
 if (!document.getElementById('fly-style')) {
@@ -503,7 +503,7 @@ if (!document.getElementById('fly-style')) {
     document.head.appendChild(flyStyle);
 }
 
-// Gaming retro easter egg - MODIFICATION KONAMI CODE
+
 let konamiCode = [];
 const konamiSequence = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight', 'KeyB', 'KeyA', 'Enter'];
 
@@ -514,10 +514,10 @@ document.addEventListener('keydown', (e) => {
     }
     
     if (konamiCode.join(',') === konamiSequence.join(',')) {
-        // Retro game activated with redirect!
+        
         document.body.style.filter = 'sepia(1) hue-rotate(30deg)';
         
-        // Show activation message
+        
         const retroMsg = document.createElement('div');
         retroMsg.innerHTML = '🎮 KONAMI CODE ACTIVATED! 🎮<br><span style="font-size: 0.8em;">Redirecting to secret zone...</span>';
         retroMsg.style.cssText = `
@@ -539,41 +539,35 @@ document.addEventListener('keydown', (e) => {
         `;
         document.body.appendChild(retroMsg);
         
-        // Sound effect simulation
+        
         if (typeof playBeep === 'function') {
             playBeep(800, 200);
             setTimeout(() => playBeep(1000, 200), 200);
             setTimeout(() => playBeep(1200, 300), 400);
         }
         
-        // Afficher message dans le terminal si disponible
+        
         if (typeof showTerminalMessage === 'function') {
             showTerminalMessage('🚀 KONAMI CODE: Accès à la zone secrète autorisé!', 'success');
         }
         
-        // Redirection après 3 secondes
+        
         setTimeout(() => {
-            // Choix du site de redirection - vous pouvez changer l'URL ici
+            
             const secretSites = [
-                'https://niggachain.ai/'
+                "https://www.niggachain.com",
             ]
-            // Vous pouvez choisir un site spécifique ou aléatoire
+            
             const randomSite = secretSites[Math.floor(Math.random() * secretSites.length)];
             
-            // Ou forcer un site spécifique en décommentant la ligne suivante :
-            // const targetSite = 'https://github.com/CrOwOleyy';
-            
-            // Animation de téléportation
             document.body.style.transition = 'all 0.5s ease';
             document.body.style.transform = 'scale(0)';
             document.body.style.opacity = '0';
             
             setTimeout(() => {
-                // Redirection vers le site choisi
-                window.open(randomSite, '_blank'); // Ouvre dans un nouvel onglet
-                // ou utilisez window.location.href = randomSite; pour rediriger dans le même onglet
                 
-                // Restaurer la page après la redirection
+                window.open(randomSite, '_blank'); 
+    
                 document.body.style.transform = 'scale(1)';
                 document.body.style.opacity = '1';
                 document.body.style.filter = '';
@@ -586,7 +580,7 @@ document.addEventListener('keydown', (e) => {
     }
 });
 
-// Audio feedback (orange themed beeps) - CORRECTION
+
 function initAudioFeedback() {
     try {
         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
@@ -609,14 +603,14 @@ function initAudioFeedback() {
             oscillator.stop(audioContext.currentTime + duration / 1000);
         }
         
-        // Add sound to buttons
+        
         document.querySelectorAll('.btn').forEach(btn => {
             btn.addEventListener('click', () => {
                 playBeep(1200, 50);
             });
         });
         
-        // Add sound to nav links
+        
         document.querySelectorAll('.nav-link').forEach(link => {
             link.addEventListener('click', () => {
                 playBeep(900, 30);
@@ -627,10 +621,10 @@ function initAudioFeedback() {
     }
 }
 
-// Initialize audio on first user interaction
+
 document.addEventListener('click', initAudioFeedback, { once: true });
 
-// Console ASCII art - CORRECTION
+
 console.log(`
     ██╗     ███████╗██╗   ██╗██╗   ██╗
     ██║     ██╔════╝╚██╗ ██╔╝╚██╗ ██╔╝
@@ -649,7 +643,7 @@ console.log(`
     Portfolio by LEYY - Neocron Evolution Theme
 `);
 
-// Initialize everything when DOM is ready - CORRECTION
+
 document.addEventListener('DOMContentLoaded', () => {
     console.log('🔥 Neocron Evolution Portfolio initialized');
     console.log('👨‍💻 Created by LEYY - Epitech Marseille PGE');
